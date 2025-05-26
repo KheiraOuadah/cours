@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    <title>afficher les employés</title>
+{% endblock %}
+
+{% block body %}
+    <h2>Filtrer les employés </h2>
+    <form action="/employe/filtre" method="GET">
+    <fieldset>
+        <br>
+        <label for="filter_word">Employés dont le nom est composé par </label>
+        <input type="text" value="" name="filter_word" id="filter_word"><br><br>
+
+        <p>Types d'employés :</p>
+        <input type="checkbox" value ='1' name="filter_items" >
+        Production<br>
+        <input type="checkbox" value ='2' name="filter_items" >
+        Marketing<br>
+        <input type="checkbox" value ='3' name="filter_items" >
+        Méthode<br>
+        <input type="checkbox" value ='4' name="filter_items" >
+        Recherche et développement<br>
+
+        <p>Employés dont le prix est compris entre :</p>
+        <label for="filter_value_min"> minimum </label>
+        <input type="number" value="" name="filter_value_min" id="filter_value_min"><br><br>
+        <label for="filter_value_max"> maximum </label>
+        <input type="number" value="" name="filter_value_max" id="filter_value_max"><br>
+
+    <br>
+    </fieldset>
+    <input type="submit" value="Soumettre le filtre" name="valider le filtre">
+    </form>
+
+{% endblock %}

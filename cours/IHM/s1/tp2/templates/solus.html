@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% block title %}
+        <title>solus</title>
+    {% endblock %}
+
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" >
+    {% endblock %}
+</head>
+
+<body>
+<label for = "id">taper votre code client : </label>
+<input type ="text" id = "id" name = "id" placeholder="id client" onchange= "changeId(this.value)">
+
+
+<script type="text/javascript" src="/static/script.js"></script>
+</body>
+</html>

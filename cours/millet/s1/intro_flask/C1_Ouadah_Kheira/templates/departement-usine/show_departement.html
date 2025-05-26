@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    <title>afficher les types d'employés</title>
+{% endblock %}
+
+{% block body %}
+<h3>Types d'employés</h3>
+<a href="/departement-usine/add">ajouter un département</a>
+<br><br>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th style="width: 30px;">id</th>
+            <th style="width: 50px;">nom de Departement</th>
+            <th style="width: 30px;">logo</th>
+            <th style="width: 50px;">opération</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% if departementsUsine | length >= 1 %}
+        {% for ligne in departementsUsine %}
+           <tr>
+                  <td>{{ ligne.id }}</td>
+                  <td>{{ ligne.nomDepartement }}</td>
+                  <td>{%  if ligne.logo is not none and ligne.logo != "" %}
+                  <img style="width:40px;height:40px"  src="{{ url_for('static', filename = 'images/image_dep/' + ligne['logo']) }}"  alt="image  de {{ ligne.nomDepartement }}" >
+                  {% else %}
+                  <img style="width:40px;height:40px"   src="{{ url_for('static', filename='images/no_photo.jpg')}}"  alt="no image" >
+                  {% endif %} </td>
+                  <td>
+                      <button onclick="location.href='/departement-usine/edit?id={{ ligne.id }}'">Éditer</button>
+                      <button onclick="location.href='/departement-usine/delete?id={{ ligne.id }}'">Supprimer</button>
+                  </td>
+           </tr>
+        {% endfor %}
+    {% else %}
+            <tr>
+                  <td>
+                      pas de département
+                  </td>
+           </tr>
+    {% endif %}
+    </tbody>
+</table>
+{% endblock %}

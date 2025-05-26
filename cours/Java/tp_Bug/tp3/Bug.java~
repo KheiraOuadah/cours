@@ -1,0 +1,34 @@
+/**
+ * Created by zulupero on 20/06/16.
+ */
+public class Bug extends Buggle {
+    public Bug(int posx, int posy, int dir) {
+        super(posx, posy, dir);
+    }
+
+    
+    public void enRoute() throws InterruptedException {
+        int nbreBonnePhrase=0;
+	int nbrePhrase=0;
+
+        while (Main.input.hasNext()) { // lit une ligne du fichier
+	    nbrePhrase++;
+	    String ligne = Main.input.nextLine();
+	    String premiereLettre= ligne.substring(0,1);
+	    String premiereLettreEnMaj= premiereLettre.toUpperCase();
+
+	    if(premiereLettre.equals(premiereLettreEnMaj)){
+		nbreBonnePhrase++;
+	    }else{
+		ligne.replaceFirst(premiereLettre,premiereLettreEnMaj);
+	    }
+	    System.out.println(ligne);
+	}
+	double note = nbreBonnePhrase/nbrePhrase*100;
+	System.out.println("-------- fin de la correction ----------");
+	System.out.println("Note : "+note+"% de bonnes phrases.");
+
+	    
+        }   
+    
+}

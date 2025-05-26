@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    <title>Etat </title>
+{% endblock %}
+
+{% block body %}
+    <h2>Etat global</h2>
+
+    <h3>Nombre d'employés par département</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nom du Département</th>
+                <th>Nombre d'employés </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for employe in employes %}
+                <tr>
+                    <td>{{ employe.departement }}</td>
+                    <td>{{ employe.Nbre_employes }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <br><br>
+    <h3>Salaire total par département</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nom du Département</th>
+                <th>Salaire Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for salaire in salaire %}
+                <tr>
+                    <td>{{ salaire.Nom_Departement }}</td>
+                    <td>{{ salaire.Salaire_Total }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="article.css" rel="stylesheet">
+    <title>article</title>
+</head>
+<body>
+    <fieldset>
+        <form action="form_article.html" method="get"></form>
+        <input type="hidden"  name="id" value="1234">
+        <label for="nom">Libelle :</label>
+        <br>
+        <input type="text"  name="nom" required placeholder="Nom de l'article ?">
+        <br>
+        <label for="type_article_id">Type d'article  :</label>
+        <br>
+        <select name="type_article_id" required id="type_article_id">
+            <option value="">identifiants des types d’articles</option> 
+            <br>           
+            <option value="1">Fourniture de bureau</option>
+            <option value="2">Mobilier</option>
+            <option value="3">Mobilier Jardin</option>
+            <option value="4">Arrosage</option>
+            <option value="5">Outils</option>
+            <option value="6">Divers</option>
+        </select>
+        <br>
+        <label for="prix">Prix de l'article :</label>
+        <br>
+        <input type="number"  name="prix" placeholder="Entrez un prix.">
+        <br>
+        <label for="stock">Stock :</label>
+        <br>
+        <input type="number"  name="stock" placeholder="Stock disponible ?">
+        <br>
+        <label for="description">Ajouter une description :</label>
+        <br>
+        <textarea name="description" placeholder="Décrivez en quelques mots votre article. "></textarea>
+        <br>
+        <label for="image">Image de l'article :</label>
+        <br>
+        <input type="text"  name="image" placeholder="Ajoutez une photo.">
+        <br>
+        
+    </fieldset>
+    <button type="submit" name="valider">Valider </button>
+</body>
+</html>

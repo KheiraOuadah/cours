@@ -1,0 +1,145 @@
+/**
+ * Created by zulupero on 20/06/16.
+ */
+public class Bug extends Buggle {
+    public Bug(int posx, int posy, int dir) {
+        super(posx, posy, dir);
+    }
+
+    public void enRoute() {
+	setVitesse(7);
+	setX(7);
+	setY(1);
+	setCouleur(StdDraw.BOOK_LIGHT_BLUE);
+	baisseBrosse();
+
+        gauche();
+	avance();
+	avance();
+	avance();
+	avance();
+	avance();
+	droite();
+	avance();
+	leveBrosse();
+	avance();
+	droite();
+	avance();
+	baisseBrosse();
+	leveBrosse();
+	gauche();
+	avance();
+	droite();
+	avance();
+	baisseBrosse();
+	leveBrosse();
+	gauche();
+	avance();
+	droite();
+	avance();
+	baisseBrosse();
+	leveBrosse();
+	gauche();
+	avance();
+	droite();
+	avance();
+	baisseBrosse();
+	leveBrosse();
+	gauche();
+	avance();
+	droite();
+	avance();
+	baisseBrosse();
+
+	gauche();
+	avance();
+	gauche();
+	avance();
+	avance();
+	avance();
+	avance();
+	avance();
+
+	setX(7);
+	setY(1);
+	setCouleur(StdDraw.WHITE);
+	baisseBrosse();
+
+        
+	avance();
+	avance();
+	avance();
+	avance();
+	avance();
+	droite();
+	avance();
+	leveBrosse();
+	avance();
+	droite();
+	avance();
+	baisseBrosse();
+	leveBrosse();
+	gauche();
+	avance();
+	droite();
+	avance();
+	baisseBrosse();
+	leveBrosse();
+	gauche();
+	avance();
+	droite();
+	avance();
+	baisseBrosse();
+	leveBrosse();
+	gauche();
+	avance();
+	droite();
+	avance();
+	baisseBrosse();
+	leveBrosse();
+	gauche();
+	avance();
+	droite();
+	avance();
+	baisseBrosse();
+
+	gauche();
+	avance();
+	gauche();
+	avance();
+	avance();
+	avance();
+	avance();
+	avance();
+	
+	setX(1);
+	setY(1);
+	setCouleur(StdDraw.GREEN);
+	droite();
+	avance(3);
+	leveBrosse();
+	avance();
+	droite();
+	avance();
+	baisseBrosse();
+	leveBrosse();
+	gauche();
+	avance();
+	droite();
+	avance();
+	baisseBrosse();
+	leveBrosse();
+	gauche();
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    }
+
+}

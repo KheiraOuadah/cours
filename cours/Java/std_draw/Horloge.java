@@ -1,0 +1,79 @@
+import java.util.*;
+public class Horloge{
+    public static void main (String[] args){
+	while(true){
+	int hours = Calendar.getInstance().get(Calendar.HOUR) ;
+	int minutes = Calendar.getInstance().get(Calendar.MINUTE) ;
+	int seconds = Calendar.getInstance().get(Calendar.SECOND) ;
+	//amplitude des abscisses/ordonnées
+	StdDraw.setXscale(-1.2,1.2);
+	StdDraw.setYscale(-1.2,1.2);
+	
+	//cercle
+	StdDraw.setPenColor(StdDraw.BOOK_LIGHT_BLUE);
+	StdDraw.filledCircle(0,0,1.1);
+	
+	//points
+        final double penP = 0.05;
+	StdDraw.setPenRadius(penP);
+	StdDraw.setPenColor(StdDraw.BLUE);
+        tracePoints(12);
+	
+	//heure
+	traceHeure(hours,minutes);
+	//minute
+	traceMinute(minutes,seconds);
+	//seconde
+	traceSeconde(seconds);
+        // Attendre 1 seconde avant de rafraîchir
+        StdDraw.pause(1000);
+	StdDraw.show();
+        }
+
+    }
+    public static void tracePoints(int n){
+	final double angle_step = 2*Math.PI/n;
+	for (int i = 0; i<n;i++){
+	    StdDraw.point(Math.cos(i*angle_step), Math.sin(i*angle_step));
+	}
+
+    }
+    public static void traceHeure(int hours, int minutes){
+	double angle_heure = 2*Math.PI/12;
+	StdDraw.setPenColor(StdDraw.BOOK_BLUE);
+	StdDraw.setPenRadius(0.02);
+	double x = 0.5 * Math.cos(Math.PI/2 - angle_heure*((double)hours + (double)minutes/60));
+	double y = 0.5 * Math.sin(Math.PI/2 - angle_heure*((double)hours + (double)minutes/60));
+	StdDraw.line(0,0,x,y);
+
+    }
+    public static void traceMinute(int minutes, int seconds){
+	double angle_minute = 2*Math.PI/60;
+	StdDraw.setPenColor(StdDraw.GRAY);
+	StdDraw.setPenRadius(0.01);
+	double x = 0.80 * Math.cos(Math.PI/2 - angle_minute*((double)minutes + (double)seconds/60));
+	double y = 0.80 * Math.sin(Math.PI/2 - angle_minute*((double)minutes + (double)seconds/60));
+	StdDraw.line(0,0,x,y);
+
+    }
+    public static void traceSeconde(int seconds){
+	double angle_seconds = 2*Math.PI/60;
+	StdDraw.setPenColor(StdDraw.CYAN);
+	StdDraw.setPenRadius(0.002);
+	double x = 1 * Math.cos(Math.PI/2 - angle_seconds*((double)seconds));
+	double y = 1 * Math.sin(Math.PI/2 - angle_seconds*((double)seconds));
+	StdDraw.line(0,0,x,y);
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+

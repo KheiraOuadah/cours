@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    <title>modifier un employé</title>
+{% endblock %}
+
+{% block body %}
+  <h2>modifier les informations sur un employé</h2>
+
+  <form method="post" action="/employe/edit">
+    <fieldset>
+        <legend> Modifier un employé</legend>
+        <input type="hidden" name="id" value="{{ employes.id }}" id="id">
+        <label for="nomEmploye">nom de l'employé :</label><br>
+        <input id="nomEmploye" type="text" name="nomEmploye" size="18" value="{{ employes.nom }}" ><br><br>
+        <label for="villeDept">ville de l'employé :</label><br>
+        <input id="villeDept" type="text" name="villeDept" size="18" value="{{ employes.ville }}" ><br><br>
+        <label for="dateEmbauche">date d'embauche :</label><br>
+        <input id="dateEmbauche" type="date" name="dateEmbauche" size="18" value="{{ employes.date_embauche }}" ><br><br>
+
+        <label for="indice">indice :</label><br>
+        <input id="indice" type="number" name="indice" value="{{ employes.indice }}" ><br><br>
+
+        <label for="salaire">salaire :</label><br>
+        <input id="salaire" type="number" name="salaire" size="18" value="{{ employes.salaire }}" ><br><br>
+
+        <label for="photo">logo</label><br>
+        <input id="photo" type="text" name="photo" size="18" value="{{ employes.photo }}" ><br><br>
+
+        <label for="departement_id">département de l'employé :</label><br>
+        <select name="departement_id" required id="departement_id">
+            <option value="{{ employes.id_dep }}" >{{ employes.nom_dep }}</option>
+            {% for dep in dep %}
+                {% if dep.id_dep != employes.id_dep %}
+                    <option value="{{ dep.id_dep }}" >{{ dep.nom }}</option>
+                {% endif %}
+            {% endfor %}
+        </select>
+        <br><br>
+        <input type="submit" value="Modifier" name="Modifier" >
+    </fieldset>
+  </form>
+{% endblock %}

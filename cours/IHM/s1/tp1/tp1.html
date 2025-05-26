@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <h1>IMC </h1>
+    <label for ="taille">taille (en mètre) : </label>
+    <input oninput= "validation()" type ="text" id = "taille" name = "taille" placeholder="Votre taille (exemple 1.60)" >
+    <span id = "tailleRes"></span>
+    <br><br>
+    <label for ="masse">masse (en kg) : </label>
+    <input oninput= "validation()" type ="text" id = "masse" name = "masse" placeholder="Votre masse (exemple 55)" >
+    <span id = "masseRes"></span>
+    <br><br>
+    <button onclick="effacer()">effacer</button>
+    <button onclick="calcul()" title="appuyer sur le boutton pour calculer votre IMC">calculer </button>
+    <br><br>
+    <div id = "resultat"></div>
+</body>
+</html>

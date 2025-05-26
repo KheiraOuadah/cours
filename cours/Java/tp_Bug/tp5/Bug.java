@@ -1,0 +1,50 @@
+/**
+ * Created by zulupero on 20/06/16.
+ */
+
+public class Bug extends Buggle {
+    public Bug(int posx, int posy, int dir) {
+        super(posx, posy, dir);
+    }
+
+    public void enRoute() {
+	setX(4);
+	setY(0);
+	setVitesse(20);
+	setCouleur(StdDraw.BOOK_LIGHT_BLUE);
+	baisseBrosse();
+
+	int mode = 0;
+	//tant que je ne trouve pas le biscuit
+	while(!isSurBiscuit()){
+	    if(mode==0){
+		if(getDirection().equals("N")){//si beug vers le nord
+		    if(isFaceMur())
+			mode=1;//si face mur, passe en mode 1, sinon avance vers le nord
+		    else
+			avance();
+	         }
+	          else{
+ 		    setDirection("N");
+		  }
+	    
+	    }
+	    // en mode 1
+	    else{
+		// suivre le mur tant qu'il peut pas aller en direction du nord
+		do{
+		    // s'il n'est aps face a un mur avance et verifie qu'il y a un mur a sa gauche
+		    if(!isFaceMur()){
+			avance();
+			gauche();
+		    //s'il est face a un mur tourne à droite
+		    }else{
+			droite();
+		     }
+		}
+		while(!getDirection().equals("N") && isSurBiscuit());
+	    }
+        }
+    }
+}
+

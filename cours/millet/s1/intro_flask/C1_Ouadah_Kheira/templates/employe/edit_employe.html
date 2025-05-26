@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    <title>modifier un employé</title>
+{% endblock %}
+
+{% block body %}
+  <h2>modifier les informations sur un employé</h2>
+
+  <form method="post" action="/employe/edit">
+    <fieldset>
+        <legend> Modifier un employé</legend>
+        <input type="hidden" name="id" value="{{ employe.id }}" id="id">
+        <label for="nomEmploye">nom de l'employé :</label><br>
+        <input id="nomEmploye" type="text" name="nomEmploye" size="18" value="{{ employe.nomEmploye }}" ><br><br>
+        <label for="villeDept">ville de l'employé :</label><br>
+        <input id="villeDept" type="text" name="villeDept" size="18" value="{{ employe.villeDept }}" ><br><br>
+        <label for="dateEmbauche">date d'embauche :</label><br>
+        <input id="dateEmbauche" type="date" name="dateEmbauche" size="18" value="{{ employe.dateEmbauche }}" ><br><br>
+
+        <label for="indice">indice :</label><br>
+        <input id="indice" type="number" name="indice" value="{{ employe.indice }}" ><br><br>
+
+        <label for="salaire">salaire :</label><br>
+        <input id="salaire" type="number" name="salaire" size="18" value="{{ employe.salaire }}" ><br><br>
+
+        <label for="photo">logo</label><br>
+        <input id="photo" type="text" name="photo" size="18" value="{{ employe.photo }}" ><br><br>
+
+        <label for="departement_id">département :</label><br>
+        <select name="departement_id" required id="departement_id">
+            <option value="1" {% if employe.departement_id == 1 %}selected{% endif %}>Production</option>
+            <option value="2" {% if employe.departement_id == 2 %}selected{% endif %}>Marketing</option>
+            <option value="3" {% if employe.departement_id == 3 %}selected{% endif %}>Méthode</option>
+             <option value="4" {% if employe.departement_id == 4 %}selected{% endif %}>Recherche et développement</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Modifier" name="Modifier" >
+    </fieldset>
+  </form>
+{% endblock %}

@@ -1,0 +1,1 @@
+[pour apprendre à utiliser le screen (2min)](https://www.youtube.com/watch?v=WDGYBHKinuE) 

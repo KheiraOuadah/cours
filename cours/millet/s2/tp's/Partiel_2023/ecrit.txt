@@ -1,0 +1,8 @@
+CREATE TABLE hospitalisation(
+	id_service INT,
+	id_salle INT,
+	id_patient INT,
+	date_entree DATE,
+	date_sortie DATE,
+	PRIMARY KEY (id_service, id_salle, id_patient, 
+);

@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    <title>afficher les employés</title>
+{% endblock %}
+
+{% block body %}
+<h3>Employés</h3>
+<button onclick="location.href='/employe/add'">Ajouter un employé</button>
+<br><br>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th style="width: 30px;">ID</th>
+            <th style="width: 100px;">Nom de l'employé</th>
+            <th style="width: 100px;">Ville/ Département</th>
+            <th style="width: 100px;">Date d'embauche</th>
+            <th style="width: 70px;">Indice</th>
+            <th style="width: 70px;">Salaire</th>
+            <th style="width: 70px;">Photo</th>
+            <th style="width: 100px;">Action</th>
+            <th style="width: 100px;">Département ID</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% if employes | length >= 1 %}
+        {% for ligne in employes %}
+           <tr>
+                  <td>{{ ligne.id }}</td>
+                  <td>{{ ligne.nomEmploye }}</td>
+                  <td>{{ ligne.villeDept }}</td>
+                  <td>{{ ligne.dateEmbauche }}</td>
+                  <td>{{ ligne.indice }}</td>
+                  <td>{{ ligne.salaire }}</td>
+                  <td>{%  if ligne.photo is not none and ligne.photo != "" %}
+                  <img style="width:40px;height:40px"  src="{{ url_for('static', filename = 'images/image_employe/' + ligne['photo']) }}"  alt="image  de {{ ligne.nomEmploye }}" >
+                  {% endif %} </td>
+                  <td>
+                      <button onclick="location.href='/employe/edit?id={{ ligne.id }}'">Éditer</button>
+                      <button onclick="if(confirm('Êtes-vous sûr de vouloir supprimer cet employé ?')) { location.href='/employe/delete?id={{ ligne.id }}'; }">Supprimer</button>                  </td>
+                  <td>{{ ligne.departement_id }}</td>
+
+           </tr>
+        {% endfor %}
+    {% else %}
+            <tr>
+                  <td>
+                      pas d'employé
+                  </td>
+           </tr>
+    {% endif %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,14 @@
+.navbar {
+    justify-content: center; 
+    color: white;
+}
+.image-grid img {
+    width: 100%; 
+    height: auto; 
+}
+
+@media (min-width: 1024px) {
+    #min1024{
+        background-color: rgb(255, 255, 255);
+    }
+}

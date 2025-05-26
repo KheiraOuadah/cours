@@ -1,0 +1,2 @@
+qualité : Manière d'être non mesurable (d'une chose) qui donne une valeur plus ou moins grande (s'oppose à _quantité_).
+ISO 9001 est une norme de management de la qualité reconnue dans le monde entier.

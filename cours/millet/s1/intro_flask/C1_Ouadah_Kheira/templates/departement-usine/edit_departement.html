@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    <title>modifier un département</title>
+{% endblock %}
+
+{% block body %}
+  <h2>modifier un département</h2>
+
+  <form method="post" action="/departement-usine/edit">
+    <fieldset>
+        <legend> Modifier un département</legend>
+        <input type="hidden" name="id" size="18" value="{{ departementUsine.id }}" id="id">
+        <label for="nomDepartement">nomDepartement</label><br>
+        <input type="text" name="nomDepartement" size="18" value="{{ departementUsine.nomDepartement }}" id="nomDepartement"><br>
+        <label for="logo">logo</label><br>
+        <input id="logo" type="text" name="logo" size="18" value="{{ departementUsine.logo }}" ><br>
+        <input type="submit" value="Modifier" name="Modifier" >
+    </fieldset>
+  </form>
+{% endblock %}

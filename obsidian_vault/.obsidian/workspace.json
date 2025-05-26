@@ -1,0 +1,263 @@
+{
+  "main": {
+    "id": "358c8aadc73ca32a",
+    "type": "split",
+    "children": [
+      {
+        "id": "83fb05533117ef85",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1f4b4e49a42b706c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "qualité dev/TD4 couv graph controle.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "TD4 couv graph controle"
+            }
+          },
+          {
+            "id": "eb7b7bbcbcaab87b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SAE126/Notes.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Notes"
+            }
+          },
+          {
+            "id": "384b857c5c9307d3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "POO/TP9.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "TP9"
+            }
+          },
+          {
+            "id": "e16e830cf032cdc3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled"
+            }
+          },
+          {
+            "id": "f70907f0b3afbaa0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "gestion de projet/exercice_partiel.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "exercice_partiel"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c3a126253e9b6e60",
+    "type": "split",
+    "children": [
+      {
+        "id": "7f1b5169e8433463",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "081d156e80985b9a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "32e4362564512cea",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "1ea9c077e720663e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200.5
+  },
+  "right": {
+    "id": "b7b4ce0abffe3081",
+    "type": "split",
+    "children": [
+      {
+        "id": "90583b4eec7b6c35",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "21d20d1505b0426c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "terminal_commandes/Configurer sql terminal.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Configurer sql terminal"
+            }
+          },
+          {
+            "id": "d38c36aebcf531fc",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "terminal_commandes/Configurer sql terminal.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Configurer sql terminal"
+            }
+          },
+          {
+            "id": "1731c31d1877fa08",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "6bd0d93da4928648",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "terminal_commandes/Configurer sql terminal.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Configurer sql terminal"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "e16e830cf032cdc3",
+  "lastOpenFiles": [
+    "POO/TP9.md",
+    "Untitled.md",
+    "reseau/tp routage.md",
+    "SAE126/TD notes.md",
+    "SAE126/Notes.md",
+    "qualité dev/TD4 couv graph controle.md",
+    "qualité dev/TD5.md",
+    "IHM/applis.md",
+    "gestion de projet/exercice_partiel.md",
+    "gestion de projet/cours 1.md",
+    "gestion de projet/cahier des charges.md",
+    "gestion de projet/planning livrable gestion-projet.md",
+    "SAE126",
+    "qualité dev/Couverture des graphes.md",
+    "Untitled 1.md",
+    "qualité dev",
+    "POO/TD5.md",
+    "POO/TD6.md",
+    "reseau/TD/intro aux services réseaux.md",
+    "IHM application",
+    "reseau/TD",
+    "temp.md",
+    "terminal_commandes/raccourci clavier.md",
+    "MYSQL.md",
+    "IHM/S2 tp1 azar.md",
+    "mathématiques/cours 1.md",
+    "reseau",
+    "mathématiques",
+    "python/Graphes.md",
+    "POO/TD4.md",
+    "notes BDD vendredi.md",
+    "terminal_commandes/Commandes.md",
+    "POO",
+    "IHM",
+    "git",
+    "langage C/cours"
+  ]
+}

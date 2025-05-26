@@ -1,0 +1,70 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    font-family: 'Arial', sans-serif;
+
+    width: 100vw;
+}
+
+.box{
+    width: 300px;
+    height: 300px;
+    background-color: rgb(89, 146, 196);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    #max768{
+        background-color: rgb(89, 196, 98);
+    }
+}
+
+@media (min-width: 1024px) {
+    #min1024{
+        background-color: rgb(89, 196, 98);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #min768max1024{
+        background-color: rgb(89, 196, 98);
+    }
+}
+
+@media (orientation: portrait) {
+    #portrait{
+        background-color: rgb(89, 196, 98);
+    }
+}
+
+@media (orientation: landscape) {
+    #landscape{
+        background-color: rgb(89, 196, 98);
+    }
+}
+
+@media screen {
+    #screen{
+        background-color: rgb(89, 196, 98);
+    }
+}
+
+@media print {
+    #print{
+        background-color: rgb(89, 196, 98);
+    }
+}

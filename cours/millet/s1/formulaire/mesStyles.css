@@ -1,0 +1,18 @@
+form{ 
+    width: 800px;
+    margin :auto;
+
+}
+input,select {
+    display: block;
+} 
+input[type=checkbox] ,input[type=radio]  {
+    display: inline;
+}
+input::placeholder {
+    color: blue;
+}
+
+input:optional {background-color: silver;}
+input:required {background-color: yellow;}
+input:invalid  {background-color: red;} 

@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    <title>ajouter un employé</title>
+{% endblock %}
+
+{% block body %}
+  <h2>ajout d'un employé</h2>
+  <form method="post" action="/employe/add" >
+    <fieldset>
+        <legend> ajouter un employé</legend>
+        <label for="nomEmploye">nom de l'employé :</label><br>
+        <input id="nomEmploye" type="text" name="nomEmploye" size="18" value="" required placeholder="Saisir le nom de l'employé"><br><br>
+        <label for="villeDept">ville de l'employé :</label><br>
+        <input id="villeDept" type="text" name="villeDept" size="18" value="" placeholder="Saisir le nom sa ville"><br><br>
+        <label for="dateEmbauche">date d'embauche :</label><br>
+        <input id="dateEmbauche" type="date" name="dateEmbauche" size="18" value="" ><br><br>
+
+        <label for="indice">indice :</label><br>
+        <input id="indice" type="number" name="indice" value="" placeholder="Saisir l'indice"><br><br>
+
+        <label for="salaire">salaire :</label><br>
+        <input id="salaire" type="number" name="salaire" value="" placeholder="Saisir le salaire"><br><br>
+
+        <label for="photo">logo</label><br>
+        <input id="photo" type="text" name="photo" size="18" value="" placeholder="Saisir le nom de la photo"><br><br>
+
+        <label for="departement_id">département :</label><br>
+        <select name="departement_id" required id="departement_id">
+            <option value="" >sélectionner un département</option>
+            <option value="1" >Production</option>
+            <option value="2" >Marketing</option>
+            <option value="3" >Méthode</option>
+            <option value="4" >Recherche et développement</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Creer" name="Valider" >
+    </fieldset>
+  </form>
+{% endblock %}
